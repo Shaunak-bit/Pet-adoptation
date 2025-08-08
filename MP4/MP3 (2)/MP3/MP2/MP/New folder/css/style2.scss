@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+// Variables
+$carrot-color: #e67e22;
+$black: #130f40;
+$white: #fff;
+$light-color: #666;
+$light-bg: #eee;
+$border: 0.2rem solid $black;
+$box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+// Mixins
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+
+@mixin form-btn {
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+        background: $black;
+        color: $white; // Add text color change on hover
+    }
+}
+
+@mixin white-btn {
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+        color: $black;
+        background: $white; // Add background change on hover
+    }
+}
+
+// Global styles
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.4s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $carrot-color;
+        border-radius: 5rem;
+    }
+}
+
+/* Add comments to sections for clarity */
+/* Header Styles */
+.header {
+    // ... (unchanged)
+}
+
+/* Home Section Styles */
+.home {
+    // ... (unchanged)
+}
+
+/* About Section Styles */
+.about {
+    // ... (unchanged)
+}
+
+// Media Queries (adjust as needed)
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        // ... (adjust as needed)
+    }
+
+    section {
+        // ... (adjust as needed)
+    }
+
+    .home {
+        // ... (adjust as needed)
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header {
+        // ... (adjust as needed)
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header .login-form {
+        width: 90%;
+    }
+}

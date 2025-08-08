@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Claws - Adoption List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5a8239fb46.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="list,css.css"> 
+</head>
+<body>
+    <div class="top-bar">
+        <p><i class="fa-solid fa-envelope"></i> paws&clawsofficial@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 00-0000-0000</p>
+    </div>
+
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                <span>Paws & Claws</span>
+            </div>
+            <ul>
+                <li><a href="../2/index.html">HOME</a></li>
+                <li><a href="../2/index.html#about">ABOUT</a></li>
+                <li><a href="../2/shop.html">SHOP</a></li>
+                <li><a href="../2/service.html">SERVICES</a></li>
+                <li><a href="#" class="active">ADOPTION LIST</a></li>
+            </ul>
+        </div>
+        <div class="navbar-b">
+            <div class="dropdown">
+                <select id="categoryFilter">
+                    <option value="all">All Pets</option>
+                    <option value="dog">Dogs</option>
+                    <option value="cat">Cats</option>
+                </select>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="Search for pets...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Filter Options</h3>
+            <div class="filter-section">
+                <h4>Age</h4>
+                <label><input type="checkbox"> Puppy/Kitten</label>
+                <label><input type="checkbox"> Young</label>
+                <label><input type="checkbox"> Adult</label>
+                <label><input type="checkbox"> Senior</label>
+            </div>
+            <div class="filter-section">
+                <h4>Size</h4>
+                <label><input type="checkbox"> Small</label>
+                <label><input type="checkbox"> Medium</label>
+                <label><input type="checkbox"> Large</label>
+            </div>
+
+            <div class="filter-section">
+                <h4>Navi Mumbai Pet Shops</h4>
+                <div class="pet-shop-card">
+                    <i class="fas fa-store"></i>
+                    <div class="shop-info">
+                        <h5>Paws & Claws - Vashi</h5>
+                        <p>Shop 7, Sector 17, Near Vashi Station</p>
+                        <p><i class="fas fa-phone"></i> 022-2789XXXX</p>
+                        <a href="https://maps.google.com/?q=Vashi+Sector+17" target="_blank">View on Map</a>
+                    </div>
+                </div>
+                <div class="pet-shop-card">
+                    <i class="fas fa-store"></i>
+                    <div class="shop-info">
+                        <h5>Pet Zone - Nerul</h5>
+                        <p>Plot 12, Sector 19, Nerul East</p>
+                        <p><i class="fas fa-phone"></i> 022-2765XXXX</p>
+                        <a href="https://maps.google.com/?q=Nerul+Sector+19" target="_blank">View on Map</a>
+                    </div>
+                </div>
+                <div class="pet-shop-card">
+                    <i class="fas fa-store"></i>
+                    <div class="shop-info">
+                        <h5>Happy Tails - Kharghar</h5>
+                        <p>Shop 23, Sector 4, Near Central Park</p>
+                        <p><i class="fas fa-phone"></i> 022-2756XXXX</p>
+                        <a href="https://maps.google.com/?q=Kharghar+Sector+4" target="_blank">View on Map</a>
+                    </div>
+                </div>
+                <div class="pet-shop-card">
+                    <i class="fas fa-store"></i>
+                    <div class="shop-info">
+                        <h5>Pet Care Center - Seawoods</h5>
+                        <p>Shop 5, Seawoods Grand Central Mall</p>
+                        <p><i class="fas fa-phone"></i> 022-2743XXXX</p>
+                        <a href="https://maps.google.com/?q=Seawoods+Grand+Central" target="_blank">View on Map</a>
+                    </div>
+                </div>
+                <div class="pet-shop-card">
+                    <i class="fas fa-store"></i>
+                    <div class="shop-info">
+                        <h5>Pawsome Store - Belapur</h5>
+                        <p>Shop 15, Sector 3, CBD Belapur</p>
+                        <p><i class="fas fa-phone"></i> 022-2734XXXX</p>
+                        <a href="https://maps.google.com/?q=CBD+Belapur+Sector+3" target="_blank">View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="content" data-category="dog">
+                <img src="dog1.png" alt="Golden Retriever">
+                <p>Golden Retriever<br><small>2 years old • Friendly and Loyal</small></p>
+                <button class="card-btn">Adopt Me</button>
+            </div>
+
+            <div class="content" data-category="cat">
+                <img src="Cat3.jpeg" alt="Persian Cat">
+                <p>Persian Cat<br><small>1 year old • Cute and Fluffy</small></p>
+                <button class="card-btn">Adopt Me</button>
+            </div>
+
+            <div class="content" data-category="dog">
+                <img src="indian-dog.webp" alt="Indian Dog">
+                <p>Maddy<br><small>3 years old • Playful and Energetic</small></p>
+                <button class="card-btn">Adopt Me</button>
+            </div>
+
+            <div class="content" data-category="dog">
+                <img src="Dog4.jpeg" alt="Golden Retriever">
+                <p>Golden Retriever<br><small>4 years old • Gentle and Smart</small></p>
+                <button class="card-btn">Adopt Me</button>
+            </div>
+
+            <div class="content" data-category="cat">
+                <img src="catt.jpg" alt="Daisy">
+                <p>Daisy<br><small>2 years old • Sweet and Affectionate</small></p>
+                <button class="card-btn">Adopt Me</button>
+            </div>
+
+            <div class="content" data-category="cat">
+                <img src="Cat4.jpg" alt="Luna">
+                <p>Luna<br><small>1.5 years old • Playful and Social</small></p>
+                <button class="card-btn">Adopt Me</button>
+            </div>
+
+            <div class="content" data-category="cat">
+                <img src="cat5.jpg" alt="Oliver">
+                <p>Oliver<br><small>3 years old • Calm and Independent</small></p>
+                <button class="card-btn">Adopt Me</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const filterDropdown = document.getElementById('categoryFilter');
+        const items = document.querySelectorAll('.gallery .content');
+
+        filterDropdown.addEventListener('change', function () {
+            const selected = this.value.toLowerCase();
+
+            items.forEach(item => {
+                const category = item.getAttribute('data-category').toLowerCase();
+
+                if (selected === 'all' || category === selected) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+

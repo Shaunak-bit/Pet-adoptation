@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Top Bar */
+.top-bar {
+    width: 100%;
+    height: 3rem;
+    background-color: #ff6b6b;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.fa-solid {
+    color: white;
+    margin-right: 10px;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: white;
+    padding: 20px 10%;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #ff6b6b;
+}
+
+.logo span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1a237e;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #1a237e;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #ff6b6b;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background-color: #ff6b6b;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+    transform: scaleX(1);
+}
+
+.navbar-b {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Dropdown */
+.dropdown {
+    background-color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+select {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #4a90e2;
+    background: none;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+select:hover {
+    color: #2c3e50;
+}
+
+/* Search */
+.search {
+    flex: 1;
+    max-width: 500px;
+    background-color: white;
+    height: 45px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.search i {
+    color: #4a90e2;
+    cursor: pointer;
+}
+
+/* Main container */
+.container {
+    width: 80%;    
+    display: flex;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.sidebar h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.filter-section {
+    margin-bottom: 25px;
+}
+
+.filter-section h4 {
+    color: #4a90e2;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.filter-section label {
+    display: block;
+    margin: 8px 0;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.filter-section label:hover {
+    color: #4a90e2;
+}
+
+.filter-section input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Gallery for item listing */
+.gallery {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Individual item card */
+.content {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.content img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.content:hover img {
+    transform: scale(1.05);
+}
+
+.content p {
+    padding: 15px;
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+/* Content card improvements */
+.content p small {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.fa-paw {
+    color: #ff6b6b;
+    margin-right: 10px;
+}
+
+/* Button */
+.card-btn {
+    margin: 15px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-btn:hover {
+    background: linear-gradient(135deg, #ee5253 0%, #ff6b6b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(238, 82, 83, 0.3);
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .navbar-b {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .search {
+        width: 100%;
+    }
+}
+
+/* Pet Shop Cards */
+.pet-shop-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.pet-shop-card:hover {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.pet-shop-card i {
+    font-size: 1.2rem;
+    color: #ff6b6b;
+    padding-top: 3px;
+}
+
+.shop-info {
+    flex: 1;
+}
+
+.shop-info h5 {
+    color: #1a237e;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.shop-info p {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.shop-info p i {
+    color: #4a90e2;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.shop-info a {
+    color: #4a90e2;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.shop-info a:hover {
+    color: #ff6b6b;
+}
+
